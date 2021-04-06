@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- ZE_Story.html                                         Zara Escamilla-->
+<!-- Exercise 7.3 -->
+<!-- Web page is an interactive fill-in-the-blank story generator -->
+<!-- =========================================================== -->
+<html>
+ <head>
+   <title> Story Generator </title>
+ </head>
+
+ <body>
+   <h2>Story Generator</h2>
+   <p>
+
+     Enter boy's name: 
+       <input type="text" id="boyBox" size=20 value="Harry"> <br>
+     Enter girl's name: 
+       <input type="text" id="girlBox" size=20 value="Lana"> <br>
+     Enter beach name: 
+       <input type="text" id="beachBox" size=20 value="Bonita"><br>
+     Enter day:
+       <input type="text" id="dayBox" size=20 value="Saturday"><br>
+     Enter color: 
+       <input type="text" id="colorBox" size=20 value="blue"><br>
+     Enter type of day:
+       <input type="text" id="dayadjectiveBox" size=20 value="sunny">
+   </p>
+     <input type="button" value="Click to Create Story"
+                 onclick=  "boy= document.getElementById('boyBox').value;
+                                  girl= document.getElementById('girlBox').value;
+                                  beach= document.getElementById('beachBox').value;
+                                  day= document.getElementById('dayBox').value;
+                                  color= document.getElementById('colorBox').value;
+                                  typeday= document.getElementById('dayadjectiveBox').value;
+                                  document.getElementById('outputDiv').innerHTML=
+                     '<p>One ' + typeday + ' day, ' + boy + ' went to ' + beach + ' beach to collect sea shells.' +
+                     '<br> He expected to find ' + color + ' shells. But all he found were beige shells. <br>' +
+                     ' Before giving up, he saw the most beautiful girl he had ever seen. Her name was ' + girl +
+                     '. <br> She showed him the shells she found, and among them were ' + color + ' shells! <br>' +
+                     boy + ' and ' + girl + ' became very good friends, and decided to meet again on a ' + day +
+                     '<br> at ' + beach + ' beach. But until ' + day + ' comes, ' + boy + ' will hold on to the ' + color +
+                     ' shells ' + girl + ' gave him.</p> ';">
+
+
+<!-- One sunny day Harry went to Bonita Beach to collect sea shells. He expected to find blue shells. 
+       But all he found were beige shells. Before giving up, he saw the most beautiful girl he 
+       had ever seen. Her name was Lana. She showed him the shells she found, and among
+       them were blue shells! Harry and Lana became very good friends, and decided to meet
+       again on a Saturday at Bonita Beach. But until Saturday comes, Harry will hold on to the blue
+       shells Lana gave him.  -->
+     <hr>
+      <div id="outputDiv"></div>
+</body>
+</html>
